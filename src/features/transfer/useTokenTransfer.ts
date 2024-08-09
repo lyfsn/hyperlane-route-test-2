@@ -114,6 +114,7 @@ async function executeTransfer({
     // });
     const isCollateralSufficient = true
     if (!isCollateralSufficient) {
+      console.log("----debug----",isCollateralSufficient)
       toast.error('Insufficient collateral on destination for transfer');
       throw new Error('Insufficient destination collateral');
     }
