@@ -34,7 +34,6 @@ async function fetchMaxAmount({ accounts, balance, destination, origin }: FetchM
       sender: address,
       senderPubKey: await publicKey,
     });
-    console.log("------debug--333--maxAmount---", maxAmount, balance, destination, address)
     return maxAmount;
   } catch (error) {
     logger.warn('Error fetching fee quotes for max amount', error);
