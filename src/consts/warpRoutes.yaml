@@ -2,5 +2,33 @@
 # These configs will be merged with the warp routes in the configured registry
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens: []
-options: {}
+tokens:
+  - chainName: arbitrum
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USD Coin
+    addressOrDenom: "0x64429D4d9222fb4Aae2b96DBbCeE1428df44e068"
+    collateralAddressOrDenom: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"
+    connections:
+      - token: ethereum|base|0x416eFED46a9b3FDee20dcB461DC5B60f590C4E5a
+      - token: ethereum|endurance|0xfc7682E588f5cD3cDEEfEcc92D4e8A2Bc0c867c9
+  - chainName: base
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USD Coin
+    addressOrDenom: "0x416eFED46a9b3FDee20dcB461DC5B60f590C4E5a"
+    collateralAddressOrDenom: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+    connections:
+      - token: ethereum|arbitrum|0x64429D4d9222fb4Aae2b96DBbCeE1428df44e068
+      - token: ethereum|endurance|0xfc7682E588f5cD3cDEEfEcc92D4e8A2Bc0c867c9
+  - chainName: endurance
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USD Coin
+    addressOrDenom: "0xfc7682E588f5cD3cDEEfEcc92D4e8A2Bc0c867c9"
+    connections:
+      - token: ethereum|arbitrum|0x64429D4d9222fb4Aae2b96DBbCeE1428df44e068
+      - token: ethereum|base|0x416eFED46a9b3FDee20dcB461DC5B60f590C4E5a
